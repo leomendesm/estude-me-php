@@ -74,3 +74,6 @@ footer.page-footer {
 .cinza {
     background: #a8b6c0;
 }
+.ind{
+  z-index: 999;
+}
