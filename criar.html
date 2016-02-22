@@ -2,108 +2,72 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-  <title>Estude.me</title>
-  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.7.3/summernote.css" rel="stylesheet">
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.7.3/summernote.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Estude.me</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.7.3/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.7.3/summernote.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
 </head>
 
 <body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Estude.me</a>
-      <!--
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Iniciar Sessão</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Iniciar Sessão</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse grey-text text-darken-1"><i class="material-icons">menu</i></a>
-    </div>
-  -->
-  </nav>
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container valign-wrapper">
-        <br>
-        <br>
-        <h2 class="center white-text text-lighten-1 title valign">Selecione uma matéria</h2>
-        <br>
-        <br>
-
-      </div>
-    </div>
-    <div class="parallax"><img src="img/book2.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-  <br>
-  <div class="container">
-    <div class="row">
-      <form id="form_id" action="/summernote.php" onsubmit="return postForm()">
-        <div class="input-field col s12 m6 ind">
-          <select>
-            <optgroup label="Matemática" selected>
-              <option value="1">Matemática - Frente 1</option>
-              <option value="2">Matemática - Frente 2</option>
-              <option value="3">Matemática - Frente 3</option>
-              <option value="4">Matemática - Frente 4</option>
-            </optgroup>
-            <optgroup label="Química">
-              <option value="1">Frente 1</option>
-              <option value="2">Frente 2</option>
-              <option value="3">Frente 3</option>
-              <option value="4">Frente 4</option>
-            </optgroup>
-            <optgroup label="Biologia">
-              <option value="1">Frente 1</option>
-              <option value="2">Frente 2</option>
-              <option value="3">Frente 3</option>
-              <option value="4">Frente 4</option>
-            </optgroup>
-            <optgroup label="Geografia">
-              <option value="1">Frente 1</option>
-              <option value="2">Frente 2</option>
-              <option value="3">Frente 3</option>
-              <option value="4">Frente 4</option>
-            </optgroup>
-          </select>
-          <label>Selecione a Matéria</label>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Estude.me</a>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Retornar</a></li>
+            </ul>
         </div>
-        <div class="input-field col s12 m6 ind">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-          <label for="first_name">Nome da Aula</label>
-        </div>
-        <textarea id="summernote" rows="6" name="textarea_name"></textarea>
-      </form>
-      <input type="submit">
+    </nav>
+    <ul class="nav nav-tabs tab">
+        <li role="presentation" class="active"><a href="#">Criar Aula</a></li>
+        <li role="presentation"><a href="#">Dúvidas <span class="badge">4</span></a></li>
+    </ul>
+    <div class="container">
+
+        <form id="testre" action="/summernote.php" onsubmit="return postForm()">
+            <div class="form-group">
+                <br/>
+                <label for="sel1">Selecione a Matéria:</label>
+                <select class="form-control" id="sel1">
+                    <option>matemática</option>
+                    <option>Física</option>
+                    <option>História</option>
+                    <option>Geografia</option>
+                </select>
+                <br>
+                <input type="text" class="form-control" placeholder="Nome da aula" aria-describedby="sizing-addon2">
+
+            </div>
+            <textarea id="summernote" rows="6" name="textarea_name"></textarea>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+        <!-- Split button -->
+
     </div>
-  </div>
-  <script>
-    $(document).ready(function() {
-      $('select').material_select();
-    });
-    $(document).ready(function() {
-      $('#summernote').summernote({
-        height: 250, // set editor height
-        minHeight: null, // set minimum height of editor
-        maxHeight: null, // set maximum height of editor
-        focus: true // set focus to editable area after initializing summernote
-      });
-    });
-  </script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script src="lang/pt-br.js"></script>
+    <script type="application/javascript">
+        $(document).ready(function () {
+            $('#summernote').summernote({
+                height: 250, // set editor height
+                minHeight: null, // set minimum height of editor
+                maxHeight: null, // set maximum height of editor
+                focus: true // set focus to editable area after initializing summernote
+            });
+
+        });
+        var postForm = function () {
+            var content = $('textarea[name="content"]').html($('#summernote').code());
+        }
+    </script>
 </body>
 
 </html>
