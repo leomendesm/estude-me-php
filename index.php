@@ -30,6 +30,11 @@
                 $('#prog').hide(); //Esconde o elemento com id errolog
                 $('#materia').hide();
                 $('#log').hide();
+                $('#register').hide();
+                $('#troca').click(function(){
+                $('#login').hide();
+                $('#register').show();
+                 });
                 var islogged = <?=$islogged?>;
                 if (islogged == 1) {
                     $('#principal').hide();
@@ -60,11 +65,39 @@
                     })
                     return false; //Evita que a página seja atualizada
                 })
+                 $('#formregister').submit(function () { //Ao submeter formulário
+            $('#prog').show();
+            var nome = $('#nome').val(); //Pega valor do campo email
+            var email = $('#email').val(); //Pega valor do campo senha
+            var senha = $('#senha').val(); //Pega valor do campo senha
+            var csenha = $('#csenha').val(); //Pega valor do campo senha
+            var ano = $('#ano').val(); //Pega valor do campo senha
+            var code = $('#code').val(); //Pega valor do campo senha
+            $.ajax({ //Função AJAX
+                url: "register.php", //Arquivo php
+                type: "post", //Método de envio
+                data: "nome=" + nome + "&senha=" + senha + "&email=" + email + "&csenha=" + csenha + "&ano=" + ano + "&code=" + code, //Dados
+                success: function (result) { //Sucesso no AJAX
+                    if (result == 1) {
+                        //Redireciona
+                        $('#principal').hide();
+                        $('#materia').show();
+                        $('#nlog').hide();
+                        $('#log').show();
+                        $('#modal2').closeModal();
+                    } else {
+                        $('#errolog').show(); //Informa o erro
+                    }
+                }
+            })
+            return false; //Evita que a página seja atualizada
+        })
+
             });
         </script>
         <div id="modal2" class="modal" style="height:120%;">
             <div class="modal-content">
-                <div class="row">
+                <div class="row" id="login">
                     <form id="formlogin" class="col s12">
                         <div class="row">
                             <div class="input-field col s12 m12 left">
@@ -94,6 +127,59 @@
                     </form>
 
                 </div>
+                  <div class="row" id="register">
+    <form id="formregister" class="col s12">
+      <div class="row">
+
+        <div class="input-field col s12 m12 left">
+          <h4> Login: </h4>
+          <h5 id="errolog" class="red-text text-darken-2">Usuário ou senha incorretos!</h5>
+        </div>
+        <div class="input-field col s12 m6">
+          <input id="nome" type="text" class="validate" name="email" autofocus placeholder="Ex:asd@asd.com">
+          <label for="nome">Nome</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input id="email" type="text" class="validate" name="email" placeholder="Ex:asd@asd.com">
+          <label for="email">E-Mail</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input id="senha" type="password" class="validate" name="senha" placeholder="Ex:12345678">
+          <label for="valor">Senha</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input id="csenha" type="password" class="validate" name="senha" placeholder="Ex:12345678">
+          <label for="valor">Confirmar Senha</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input id="csenha" type="password" class="validate" name="senha" placeholder="Ex:12345678">
+          <label for="valor">Confirmar Senha</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <select id="ano" name="cate">
+              <option value="1">1º Ano do Ensino Médio</option>
+              <option value="2">2º Ano do Ensino Médio</option>
+              <option value="3">3º Ano do Ensino Médio</option>
+          </select>
+          <label>Selecione uma categoria</label>
+        </div>
+
+      </div>
+      <div class="input-field col s12 m6 left">
+        <p>Caso não possua uma conta ainda clique <a href="criar">Aqui</a>!</p>
+      </div>
+      <div class="input-field col s12 m6 right">
+        <button class="btn waves-effect waves-light right" type="submit" name="action">Login
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+      <div id="prog" class="progress">
+        <div class="indeterminate"></div>
+      </div>
+    </form>
+
+  </div>
+
             </div>
         </div>
         <!-- Menu -->
