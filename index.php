@@ -25,6 +25,7 @@
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
+                var log = 0;
                 $('.modal-trigger').leanModal();
                 $('#errolog').hide(); //Esconde o elemento com id errolog
                 $('#prog').hide(); //Esconde o elemento com id errolog
@@ -32,8 +33,15 @@
                 $('#log').hide();
                 $('#register').hide();
                 $('#troca').click(function(){
-                $('#login').hide();
-                $('#register').show();
+                    if(log == 1){
+                        $('#login').hide();
+                        $('#register').show();
+                        log = 0;
+                    }else{
+                        $('#login').show();
+                        $('#register').hide();
+                        log = 1;
+                    }
                  });
                 var islogged = <?=$islogged?>;
                 if (islogged == 1) {
@@ -114,7 +122,7 @@
                             </div>
                         </div>
                         <div class="input-field col s12 m6 left">
-                            <p>Caso não possua uma conta ainda clique <a href="criar">Aqui</a>!</p>
+                            <p>Caso não possua uma conta ainda clique <a id="troca">Aqui</a>!</p>
                         </div>
                         <div class="input-field col s12 m6 right">
                             <button class="btn waves-effect waves-light right" type="submit" name="action">Login
