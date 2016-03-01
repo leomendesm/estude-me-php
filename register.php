@@ -2,30 +2,35 @@
     session_start();
     include "conect.php";
     if (!empty($_POST)){
-        $email = $_POST["e-mail"];
+        $nome = $_POST["nome"];
+        $email = $_POST["email"];
         $pass = md5($_POST["senha"]);
         $cpass = md5($_POST["csenha"]);
-        $iduser = $_SESSION["id"];
-        if($pass != $cpass){
-            header("Location: index.php#modal2");
+        $ano = $_POST["ano"];
+        $code = $_POST["code"];
+        if($code == "profobj2016"){
+            $perm = 1;
         }else{
-            $pass = md5($pass);
-            $queru = "SELECT * FROM usuario WHERE email = '$email'";
+          $perm = 0;
+        };
+        if($pass == $cpass){
+            $pass = md5(md5($pass));
+            $queru = "SELECT * FROM user WHERE email = '$email'";
             $ran = $mysql->query($queru);
             $cont = $ran->num_rows;
             if($cont == 0){
-                $query = "UPDATE usuario SET email='$email', senha='$pass' WHERE id='$iduser'";
+                $query = "INSERT INTO user(nome,email,senha,permi,ano) VALUES ('$nome','$email','$pass','$perm','$ano')";
                 $run = $mysql->query($query);
-                $id_user = $_SESSION["id"];
-                setcookie("id", $id_user, time()+3600*24*99999);
-                $_SESSION["id"] = $_COOKIE["id"];
-                $_SESSION["email"] = $email;
-                header("Location: index.php");
+                echo 1;
+                exit;
             }else{
-                header("Location: index2.php");
+                echo 2;
             }
+
+        }else{
+            echo 3;
         }
     }else{
-        header("Location: index.php");
+    header("location: index");
     }
 ?>

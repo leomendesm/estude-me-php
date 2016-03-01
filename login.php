@@ -5,7 +5,7 @@
         $senha=$_POST['senha'];
 
       //Consulta no banco de dados
-        $sql="select * from user where email='".$email."' and senha='".md5($senha)."'";
+        $sql="select * from user where email='".$email."' and senha='".md5(md5(md5($senha)))."'";
         $run = $mysql->query($sql);
         $fetch = $run->fetch_assoc();
         $cont = $run->num_rows;//
@@ -21,9 +21,7 @@
             }
         }
         else{
-           echo 0;	//Se a consulta não retornar nada é porque as credenciais estão erradas
+           echo 0;	//retorna erro.
 	   }
     }
-
-   // $email = $_POST["email"]; $pass = md5($_POST["senha"]); $remember = $_POST["lembrar"]; $query = "SELECT * FROM user WHERE email = '$email' AND senha = '$pass'"; $run = $mysql->query($query); $cont = $run->num_rows; echo $cont; if($cont == 1){ $fetch = $run->fetch_assoc(); $id = $fetch["id"]; $_SESSION["id"] = $id; $id_user = $_SESSION["id"]; if(isset($remember)){ setcookie("id", $id_user, time()+3600*24*99999); $_SESSION["id"] = $_COOKIE["id"]; } $_SESSION["email"] = $email; header("Location: index.php"); }else{ //header("Location: login.php"); } }
 ?>
