@@ -1,8 +1,7 @@
 <?php
 
     session_start();
-    $perm = $_SESSION["permi"];
-    if($perm < 1){
+    if(!isset($_SESSION["id"])){
         header('location: index');
     }
 
@@ -71,39 +70,38 @@
             <!-- Split button -->
 
         </div>
+        <script src="js/lang/summernote-pt-BR.js"></script>
         <script type="application/javascript">
             $(document).ready(function () {
-                $(function () {
-                    $('#summernote').summernote({
-                        height: 250, // set editor height
-                        minHeight: null, // set minimum height of editor
-                        maxHeight: null, // set maximum height of editor
-                        focus: true, // set focus to editable area after initializing summernote
-                        onImageUpload: function (files, editor, $editable) {
-                            sendFile(files[0], editor, $editable);
+                $('#summernote').summernote({
+                    lang: 'pt-BR',
+                    height: 250, // set editor height
+                    minHeight: null, // set minimum height of editor
+                    maxHeight: null, // set maximum height of editor
+                    focus: true, // set focus to editable area after initializing summernote
+                    callbacks: {
+                        onImageUpload: function (files) {
+                            sendFile(files[0]);
                         }
-                    });
-
-                    function sendFile(file, editor, welEditable) {
-                        data = new FormData();
-                        data.append("file", file);
-                        $.ajax({
-                            url: "uploader.php",
-                            data: data,
-                            cache: false,
-                            contentType: false,
-                            processData: false,
-                            type: 'POST',
-                            success: function (data) {
-                                alert(data);
-                                $('.summernote').summernote("insertImage", data, 'filename');
-                            },
-                            error: function (jqXHR, textStatus, errorThrown) {
-                                console.log(textStatus + " " + errorThrown);
-                            }
-                        });
                     }
                 });
+
+                function sendFile(file) {
+                    data = new FormData();
+                    data.append("file", file);
+                    console.log(data);
+                    $.ajax({
+                        data: data,
+                        type: "POST",
+                        url: "uploader.php",
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        success: function (url) {
+                            $('#summernote').summernote('insertImage', url, url);
+                        }
+                    });
+                }
 
                 $('#formaula').submit(function () { //Ao submeter formulário
                     $('#prog_log').show();
@@ -117,9 +115,9 @@
                         data: "nome=" + nome + "&materia=" + mate + "&frente=" + frente + "&content=" + content, //Dados
                         success: function (result) { //Sucesso no AJAX
                             if (result == 1) {
-                                alert("Aeo"); //Redireciona
+                                window.location = "http://estude.esy.es";
                             } else {
-                                alert("Fudeo Bahea");
+                                alert("Algo está errado!");
                             }
                         }
                     })

@@ -2,8 +2,13 @@
 <?php
     session_start();
     include "conect.php";
+    include "template.php";
+
     $idaula = $_GET["id"];
     $naula = $_GET["cont"];
+    if(!isset($idaula) || !isset($naula)){
+        header('location: index');
+    }
 ?>
     <html lang="en">
 
@@ -19,25 +24,13 @@
     </head>
 
     <body>
-        <nav class="white" role="navigation">
-            <div class="nav-wrapper container">
-                <a id="logo-container" href="#" class="brand-logo">Estude.me</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Iniciar Sessão</a></li>
-                </ul>
-
-                <ul id="nav-mobile" class="side-nav">
-                    <li><a href="#">Iniciar Sessão</a></li>
-                </ul>
-                <a href="#" data-activates="nav-mobile" class="button-collapse grey-text text-darken-1"><i class="material-icons">menu</i></a>
-            </div>
-        </nav>
-        <div id="index-banner" class="parallax-container">
-            <div class="section no-pad-bot">
-                <div class="container valign-wrapper">
-                    <br>
-                    <br>
-                    <?php
+        <?= $nav ?>
+            <div id="index-banner" class="parallax-container">
+                <div class="section no-pad-bot">
+                    <div class="container valign-wrapper">
+                        <br>
+                        <br>
+                        <?php
                         $query = "SELECT * FROM aula WHERE id='$idaula' ORDER BY id ASC";
                         $run = $mysql->query($query);
                     while($fetch = $run->fetch_assoc()){
@@ -52,41 +45,21 @@
         <div class="container">
             <div class="row">';
                     echo $fetch['conteudo'];
+                    echo "</div>";
                         }
                     ?>
-                </div>
-            </div>
-        </div>
-        </div>
-        <footer class="page-footer grey darken-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Sobre o Estude.me</h5>
-                        <p class="grey-text text-lighten-4">Estude.me é um projeto criado por um aluno do colégio objetivo buscando ajudar alunos no ensino médio em seus estudos para vestibulares e concursos.</p>
-                    </div>
-                    <div class="col l3 s12 right">
-                        <h5 class="white-text">Links</h5>
-                        <ul>
-                            <li><a class="white-text" href="#!">Objetivo Litoral</a></li>
-                            <li><a class="white-text" href="#!">Conectados educacional</a></li>
-                            <li><a class="white-text" href="#!">Facebook - Conectados</a></li>
-                        </ul>
                     </div>
                 </div>
+
             </div>
-            <div class="footer-copyright">
-                <div class="container center">
-                    Made with love using <a class="white-text" href="http://materializecss.com" target="_blank">Materialize</a> by <a class="white-text" href="http://github.com/leomendesm" target="_blank">Leonardo Mendes Miraglia</a>
-                </div>
-            </div>
-        </footer>
+            <?= $footer ?>
 
 
-        <!--  Scripts-->
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/init.js"></script>
+                <!--  Scripts-->
+                <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+                <script src="js/materialize.js"></script>
+                <script src="js/init.js"></script>
+
 
     </body>
 
