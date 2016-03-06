@@ -88,3 +88,24 @@ footer.page-footer {
     margin-top: -59px;
     font-size: 11px;
 }
+
+.fixa {
+    bottom: 0;
+    width: 100%;
+}
+
+.fixa1 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
