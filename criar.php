@@ -77,6 +77,7 @@
                     lang: 'pt-BR',
                     height: 250, // set editor height
                     minHeight: null, // set minimum height of editor
+                    //https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=escape%20ajax%20php
                     maxHeight: null, // set maximum height of editor
                     focus: true, // set focus to editable area after initializing summernote
                     callbacks: {
@@ -109,6 +110,8 @@
                     var mate = $('#sele').val(); //Pega valor do campo senha
                     var frente = $('#sele2').val(); //Pega valor do campo senha
                     var content = $('#summernote').summernote('code');
+                    content = encodeURIComponent(content);
+                    alert(content);
                     $.ajax({ //Função AJAX
                         url: "create.php", //Arquivo php
                         type: "post", //Método de envio
@@ -117,7 +120,7 @@
                             if (result == 1) {
                                 window.location = "http://estude.esy.es";
                             } else {
-                                alert("Algo está errado!");
+                                alert(result);
                             }
                         }
                     })

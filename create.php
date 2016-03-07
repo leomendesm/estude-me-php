@@ -10,7 +10,7 @@
         $iduser = $_SESSION["id"];
         $query = "INSERT INTO aula(nome,iduser,materia,frente,conteudo) VALUES ('$nome','$iduser','$materia','$frente','$content')";
         $run = $mysql->query($query);
-        echo 1;
+        echo $content;
         exit;
     }else{
     header("location: index");
