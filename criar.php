@@ -39,7 +39,9 @@
             <li role="presentation"><a href="#">Dúvidas <span class="badge">4</span></a></li>
         </ul>
         <div class="container">
-
+            <button id="sucess" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">asd</span>
+            </button>
             <form id="formaula">
                 <div class="form-group">
                     <br/>
@@ -105,22 +107,20 @@
                 }
 
                 $('#formaula').submit(function () { //Ao submeter formulário
-                    $('#prog_log').show();
                     var nome = $('#nome').val(); //Pega valor do campo email
                     var mate = $('#sele').val(); //Pega valor do campo senha
                     var frente = $('#sele2').val(); //Pega valor do campo senha
                     var content = $('#summernote').summernote('code');
                     content = encodeURIComponent(content);
-                    alert(content);
                     $.ajax({ //Função AJAX
                         url: "create.php", //Arquivo php
                         type: "post", //Método de envio
                         data: "nome=" + nome + "&materia=" + mate + "&frente=" + frente + "&content=" + content, //Dados
                         success: function (result) { //Sucesso no AJAX
                             if (result == 1) {
-                                window.location = "http://estude.esy.es";
+                                $('#sucess').alert();
                             } else {
-                                alert(result);
+                                alert("Todos os Campos Devem ser preenchidos");
                             }
                         }
                     })
