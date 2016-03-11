@@ -109,3 +109,7 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+.green-text-darken-2 {
+    color: #43a047;
+}

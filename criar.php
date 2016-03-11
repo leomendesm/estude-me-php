@@ -14,15 +14,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
         <title>Estude.me</title>
-        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.7.3/summernote.css" rel="stylesheet">
         <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.7.3/summernote.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-
     </head>
 
     <body>
@@ -30,7 +28,7 @@
             <div class="container">
                 <a href="index.html" class="navbar-brand">Estude.me</a>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Retornar</a></li>
+                    <li><a href="index">Retornar</a></li>
                 </ul>
             </div>
         </nav>
@@ -39,9 +37,11 @@
             <li role="presentation"><a href="#">Dúvidas <span class="badge">4</span></a></li>
         </ul>
         <div class="container">
-            <button id="sucess" type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">asd</span>
-            </button>
+            <center>
+                <div id="sucess">
+                    <h4 class="center green-text-darken-2"><b> Aula criada com sucesso! </b> </h4>
+                </div>
+            </center>
             <form id="formaula">
                 <div class="form-group">
                     <br/>
@@ -50,7 +50,11 @@
                         <option value="matematica">matemática</option>
                         <option value="fisica">Física</option>
                         <option value="história">História</option>
-                        <option value="geografia">Geografia</option>
+                        <option value="geografia">Química</option>
+                        <option value="portugues">Português</option>
+                        <option value="redacao">Redação</option>
+                        <option value="historia">História</option>
+                        <option value="literatura">Literatura</option>
                     </select>
                     <br>
                     <label for="sele2">Selecione a Matéria:</label>
@@ -75,6 +79,7 @@
         <script src="js/lang/summernote-pt-BR.js"></script>
         <script type="application/javascript">
             $(document).ready(function () {
+                $('#sucess').hide();
                 $('#summernote').summernote({
                     lang: 'pt-BR',
                     height: 250, // set editor height
@@ -107,6 +112,7 @@
                 }
 
                 $('#formaula').submit(function () { //Ao submeter formulário
+                    $('#prog_log').show();
                     var nome = $('#nome').val(); //Pega valor do campo email
                     var mate = $('#sele').val(); //Pega valor do campo senha
                     var frente = $('#sele2').val(); //Pega valor do campo senha
@@ -118,7 +124,7 @@
                         data: "nome=" + nome + "&materia=" + mate + "&frente=" + frente + "&content=" + content, //Dados
                         success: function (result) { //Sucesso no AJAX
                             if (result == 1) {
-                                $('#sucess').alert();
+                                $('#sucess').show();
                             } else {
                                 alert("Todos os Campos Devem ser preenchidos");
                             }

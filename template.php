@@ -24,6 +24,7 @@
                     </div>
                     <div id="log">
                         <li><a href="criar">Criar</a></li>
+                        <li><a href="criada">Aulas Criadas</a></li>
                         <li><a href="duvidas">Dúvidas?</a></li>
                         <li><a href="logout">Sair</a></li>
                     </div>
@@ -34,6 +35,9 @@
                         <li><a id="abrelogin2" href="#">Área do Aluno</a></li>
                     </div>
                     <div id="logm">
+                        <li><a href="criar">Criar</a></li>
+                        <li><a href="criar">Aulas Criadas</a></li>
+                        <li><a href="mostrar">Dúvidas?</a></li>
                         <li><a href="logout">Sair</a></li>
                     </div>
                 </ul>
