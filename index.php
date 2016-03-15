@@ -62,6 +62,10 @@
                 #index-banner .section {
                     top: 0
                 }
+                i.material-icons {
+                    width: 50px;
+                    height: 50px;
+                }
             }
 
             .icon-block {
@@ -390,6 +394,7 @@
                     $(document).ready(function () {
                         $('.parallax').parallax();
                         $('select').material_select();
+                        $(".button-collapse").sideNav();
                         $('#errolog').hide();
                         $('#erroreg').hide();
                         $('#prog_log').hide();
@@ -466,7 +471,9 @@
                                         $('#login').hide();
                                         $('#materia').show();
                                         $('#nlog').hide();
+                                        $('#nlogm').hide();
                                         $('#log').show();
+                                        $('#logm').show();
                                         $('#footer').removeClass('fixa');
                                         $('#footer2').removeClass('fixa1');
                                     } else {
@@ -495,6 +502,8 @@
                                         $('prog_reg').hide();
                                         $('#register').hide();
                                         $('#login').show();
+                                        $('#footer').addClass('fixa');
+                                        $('#footer2').addClass('fixa1');
                                     } else if (result == 3) {
                                         $('#prog_reg').hide();
                                         $('#erroreg').html("As senhas não coincidem!");

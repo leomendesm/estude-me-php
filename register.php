@@ -26,7 +26,6 @@
             }else{
                 echo 2;
             }
-
         }else{
             echo 3;
         }

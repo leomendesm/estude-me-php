@@ -137,6 +137,11 @@
                         <?php
                         $query = "SELECT * FROM aula WHERE id='$idaula' ORDER BY id ASC";
                         $run = $mysql->query($query);
+         $contagem = $run->num_rows;
+                            $cont = 0;
+                        if($contagem == 0){
+                            echo "<h4>Você ainda não possui aulas.</h4>";
+                        }else{
                     while($fetch = $run->fetch_assoc()){
                     echo'<h2 class="center white-text text-lighten-1 title valign">Aula '.$naula.' - '.$fetch['nome'].' </h2>
                     <br>
@@ -150,7 +155,7 @@
             <div class="row">';
                     echo $fetch['conteudo'];
                     echo "</div>";
-                        }
+                        }}
                     ?>
                     </div>
                 </div>

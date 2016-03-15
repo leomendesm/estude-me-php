@@ -15,7 +15,9 @@
                         </div>
                     </div>
                 </footer>';
-    $nav = '<nav class="white" role="navigation">
+    $nav = '
+    <div class="navbar-fixed">
+    <nav class="white" role="navigation">
             <div class="nav-wrapper container">
                 <a id="logo-container" href="index" class="brand-logo">Estude.me</a>
                 <ul class="right hide-on-med-and-down">
@@ -43,7 +45,7 @@
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse grey-text text-darken-1"><i class="material-icons">menu</i></a>
             </div>
-        </nav>';
+        </nav></div>';
     $footerindex = '<div class="hide-on-med-and-down">
                 <footer id="footer2" class="page-footer  grey darken-2">
                     <div class="container">

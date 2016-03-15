@@ -73,8 +73,6 @@
                     <button class="btn btn-primary" type="submit" name="action">Enviar</button>
                 </div>
             </form>
-            <!-- Split button -->
-
         </div>
         <script src="js/lang/summernote-pt-BR.js"></script>
         <script type="application/javascript">
@@ -82,10 +80,9 @@
                 $('#sucess').hide();
                 $('#summernote').summernote({
                     lang: 'pt-BR',
-                    height: 250, // set editor height
-                    minHeight: null, // set minimum height of editor
+                    minHeight: 250, // set minimum height of editor
                     //https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=escape%20ajax%20php
-                    maxHeight: null, // set maximum height of editor
+                    maxHeight: 800, // set maximum height of editor
                     focus: true, // set focus to editable area after initializing summernote
                     callbacks: {
                         onImageUpload: function (files) {

@@ -161,11 +161,15 @@
                         $auto = 1;
                         $query = "SELECT * FROM aula WHERE materia = '$materia' and auto ='$auto' and frente = '$frente' ORDER BY id ASC";
                         $run = $mysql->query($query);
+                        $contagem = $run->num_rows;
                             $cont = 0;
+                        if($contagem == 0){
+                            echo "<h4>Você ainda não possui aulas.</h4>";
+                        }else{
                         while($fetch = $run->fetch_assoc()){
                             ++$cont;
                             echo "<a href='aula.php?id=".$fetch["id"]."&cont=".$cont."' class='collection-item'>Aula ".$cont." - ".$fetch["nome"]."</a>";
-                        }
+                        }}
                     ?>
                     </ul>
                 </div>
