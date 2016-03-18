@@ -124,9 +124,189 @@
 
     <body>
         <?= $nav ?>
+            <div id="principal">
+                <div id="index-banner" class="parallax-container mainpage">
+                    <div class="section no-pad-bot">
+                        <div class="container">
+                            <br>
+                            <br>
+                            <h1 class="header center red-text text-lighten-1">estude.me</h1>
+                            <div class="row center">
+                                <h5 class="header col s12 light">Uma ferramenta de auxílio nos estudos.</h5> </div>
+                            <div class="row center"> <a id="abrelogin" href="#" class="btn-large waves-effect waves-light red lighten-1">Começe agora</a> </div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="parallax"><img src="img/book2-1.jpg" alt="Unsplashed background img 1"></div>
+                </div>
+                <div class="white">
+                    <div class="container">
+                        <div class="section">
+                            <div class="row">
+                                <div class="col s12 m4">
+                                    <div class="icon-block">
+                                        <h2 class="center grey-text text-darken-4"><i class="material-icons">flash_on</i></h2>
+                                        <h5 class="center">Foco nos Estudos</h5>
+                                        <p class="light">Nosso foco é lhe auxiliar, facilitando seu acesso aos conteúdos das aulas, reforçando o aprendizado e agilizando o processo.</p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="icon-block">
+                                        <h2 class="center grey-text text-darken-4"><i class="material-icons">assignment_ind</i></h2>
+                                        <h5 class="center">Facilidade de acesso</h5>
+                                        <p class="light">Você necessita apenas iniciar uma sessão para ter acesso à todo um mundo de conhecimento compartilhado entre alunos de todos os cantos do Brasil.</p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="icon-block">
+                                        <h2 class="center grey-text text-darken-4"><i class="material-icons">live_help</i></h2>
+                                        <h5 class="center">Auxílio no estudo</h5>
+                                        <p class="light">Resumos sobre os principais conteúdos e atualidades serão disponibilizados para estudos com foco em vestibulares.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="section">
+                            <div class="row">
+                                <div class="col s12 center">
+                                    <div class="icon-block">
+                                        <h2 class="center grey-text text-darken-4"><i class="material-icons">settings</i></h2>
+                                        <h4 class="center">Trabalho em equipe</h4>
+                                        <p class="left-align light">Nós precisamos de sua ajuda! O estude.me é um projeto criado por você para você, ajude-nos a ampliar nosso conteúdo produzindo aulas de maneira fácil e rápida com nosso criador.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="materia">
+                <div id="index-banner" class="parallax-container">
+                    <div class="section no-pad-bot">
+                        <div class="container valign-wrapper">
+                            <br>
+                            <br>
+                            <h2 class="center white-text text-lighten-1 title valign">Selecione uma matéria <span class="hide-on-med-and-down">para começar</span></h2>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="parallax"><img src="img/book2-1.jpg" alt="Unsplashed background img 1"></div>
+                </div>
+                <br>
+                <div class="white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s12 m4">
+                                <div class="card big">
+                                    <div class="card-image"> <img src="img/materia/bio.png" class="responsive-img"> </div>
+                                    <div class="card-content"> <span class="card-title black-text">Biologia</span>
+                                        <p>Aqui você irá encontrar tudo sobre Biologia.</p>
+                                    </div>
+                                    <div class="card-action center"> <a href='show.php?materia=biologia'>Selecionar</a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <div class="card big">
+                                    <div class="card-image"> <img src="img/materia/mate.png" class="responsive-img cinza"> </div>
+                                    <div class="card-content"> <span class="card-title black-text">Matemática</span>
+                                        <p>Aqui você irá encontrar tudo sobre Matémática.</p>
+                                    </div>
+                                    <div class="card-action center"> <a href='show.php?materia=matematica'>Selecionar</a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <div class="card big">
+                                    <div class="card-image"> <img src="img/materia/fisica.png" class="responsive-img"> </div>
+                                    <div class="card-content"> <span class="card-title black-text">Física</span>
+                                        <p>Aqui você irá encontrar tudo sobre Física.</p>
+                                    </div>
+                                    <div class="card-action center"> <a href='show.php?materia=fisica'>Selecionar</a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <div class="card big">
+                                    <div class="card-image"> <img src="img/materia/geo.png" class="responsive-img"> </div>
+                                    <div class="card-content"> <span class="card-title black-text">Geografia</span>
+                                        <p>Aqui você irá encontrar tudo sobre geografia.</p>
+                                    </div>
+                                    <div class="card-action center"> <a href='show.php?materia=geografia'>Selecionar</a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <div class="card big">
+                                    <div class="card-image"> <img src="img/materia/quimica.png" class="responsive-img"> </div>
+                                    <div class="card-content"> <span class="card-title black-text">Química</span>
+                                        <p>Aqui você irá encontrar tudo sobre Química.</p>
+                                    </div>
+                                    <div class="card-action center"> <a href='show.php?materia=quimica'>Selecionar</a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <div class="card big">
+                                    <div class="card-image"> <img src="img/materia/port.png" class="responsive-img"> </div>
+                                    <div class="card-content"> <span class="card-title black-text">Português</span>
+                                        <p>Aqui você irá encontrar tudo sobre Física.</p>
+                                    </div>
+                                    <div class="card-action center"> <a href='show.php?materia=portugues'>Selecionar</a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <div class="card big">
+                                    <div class="card-image"> <img src="img/materia/reda.png" class="responsive-img"> </div>
+                                    <div class="card-content"> <span class="card-title black-text">Redação</span>
+                                        <p>Aqui você irá encontrar tudo sobre Redação.</p>
+                                    </div>
+                                    <div class="card-action center"> <a href='show.php?materia=redacao'>Selecionar</a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <div class="card big">
+                                    <div class="card-image"> <img src="img/materia/historia.png" class="responsive-img"> </div>
+                                    <div class="card-content"> <span class="card-title black-text">História</span>
+                                        <p>Aqui você irá encontrar tudo sobre História.</p>
+                                    </div>
+                                    <div class="card-action center"> <a href='show.php?materia=historia'>Selecionar</a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <div class="card big">
+                                    <div class="card-image"> <img src="img/materia/litera.png" class="responsive-img"> </div>
+                                    <div class="card-content"> <span class="card-title black-text">Literatura</span>
+                                        <p>Aqui você irá encontrar tudo sobre Redação.</p>
+                                    </div>
+                                    <div class="card-action center"> <a href='show.php?materia=literatura'>Selecionar</a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row container" id="login">
                 <form id="formlogin" class="col s12">
                     <div class="row">
+                        <br>
                         <div class="input-field col s12 m12 left">
                             <h4> Inicie uma sessão para começar </h4>
                             <div id="prog_log" class="progress">
@@ -152,6 +332,7 @@
                 </form>
             </div>
             <div class="row container" id="register">
+                <br>
                 <form id="formregister" class="col s12">
                     <div class="row">
                         <div class="input-field col s12 m12 left">
@@ -199,194 +380,6 @@
                     </div>
                 </form>
             </div>
-            <div id="principal">
-                <div id="index-banner" class="parallax-container mainpage">
-                    <div class="section no-pad-bot">
-                        <div class="container">
-                            <br>
-                            <br>
-                            <h1 class="header center red-text text-lighten-1 title">estude.me</h1>
-                            <div class="row center">
-                                <h5 class="header col s12 light">Uma ferramenta de auxílio nos estudos.</h5> </div>
-                            <div class="row center"> <a id="abrelogin" href="#" class="btn-large waves-effect waves-light red lighten-1">Começe agora</a> </div>
-                            <br>
-                            <br>
-                        </div>
-                    </div>
-                    <div class="parallax"><img src="img/book2-1.jpg" alt="Unsplashed background img 1"></div>
-                </div>
-                <div class="white">
-                    <div class="container">
-                        <div class="section">
-                            <div class="row">
-                                <div class="col s12 m4">
-                                    <div class="icon-block">
-                                        <h2 class="center grey-text text-darken-4"><i class="material-icons">flash_on</i></h2>
-                                        <h5 class="center">Foco nos Estudos</h5>
-                                        <p class="light">Nosso foco é lhe auxiliar, facilitando seu acesso aos conteúdos das aulas, reforçando o aprendizado e agilizando o processo.</p>
-                                    </div>
-                                </div>
-                                <div class="col s12 m4">
-                                    <div class="icon-block">
-                                        <h2 class="center grey-text text-darken-4"><i class="material-icons">assignment_ind</i></h2>
-                                        <h5 class="center">Facilidade de acesso</h5>
-                                        <p class="light">Você necessita apenas iniciar uma sessão para ter acesso à todo conteúdo do site, contruir aulas e fazer perguntas diretamente aos nossos professores.</p>
-                                    </div>
-                                </div>
-                                <div class="col s12 m4">
-                                    <div class="icon-block">
-                                        <h2 class="center grey-text text-darken-4"><i class="material-icons">live_help</i></h2>
-                                        <h5 class="center">Auxílio no estudo</h5>
-                                        <p class="light">Todos resumos e teorias estarão disponíveis para consulta, ajuda na confecção de tarefas e afins.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="section">
-                            <div class="row">
-                                <div class="col s12 center">
-                                    <div class="icon-block">
-                                        <h2 class="center grey-text text-darken-4"><i class="material-icons">settings</i></h2>
-                                        <h4 class="center">Trabalho em equipe</h4>
-                                        <p class="left-align light">Nós precisamos de sua ajuda! O estude.me é um projeto criado por você para você, ajude-nos a ampliar nosso conteúdo produzindo aulas de maneira fácil e rápida com nosso criador de conteúdo.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="materia">
-                <div id="index-banner" class="parallax-container">
-                    <div class="section no-pad-bot">
-                        <div class="container valign-wrapper">
-                            <br>
-                            <br>
-                            <h2 class="center white-text text-lighten-1 title valign">Selecione uma matéria <span class="hide-on-med-and-down">para começar</span></h2>
-                            <br>
-                            <br>
-                        </div>
-                    </div>
-                    <div class="parallax"><img src="img/book2-1.jpg" alt="Unsplashed background img 1"></div>
-                </div>
-                <br>
-                <div class="white">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col s12 m4">
-                                <div class="card big">
-                                    <div class="card-image"> <img src="img/materia/bio.png" class="responsive-img"> </div>
-                                    <div class="card-content"> <span class="card-title black-text">Biologia</span>
-                                        <p>Aqui você irá encontrar tudo sobre Biologia.</p>
-                                    </div>
-                                    <div class="card-action center"> <a href='show.php?materia=biologia&frente=1' class="left">Frente 1</a> <a href='show.php?materia=biologia&frente=2' class="right">Frente 2</a>
-                                        <br><a href='show.php?materia=biologia&frente=3' class="left">Frente 3</a> <a href='show.php?materia=biologia&frente=4' class="right">Frente 4</a>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m4">
-                                <div class="card big">
-                                    <div class="card-image"> <img src="img/materia/mate.png" class="responsive-img cinza"> </div>
-                                    <div class="card-content"> <span class="card-title black-text">Matemática</span>
-                                        <p>Aqui você irá encontrar tudo sobre Matémática.</p>
-                                    </div>
-                                    <div class="card-action center"> <a href='show.php?materia=matematica&frente=1' class="left">Frente 1</a> <a href='show.php?materia=matematica&frente=2' class="right">Frente 2</a>
-                                        <br><a href='show.php?materia=matematica&frente=3' class="left">Frente 3</a> <a href='show.php?materia=matematica&frente=4' class="right">Frente 4</a>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m4">
-                                <div class="card big">
-                                    <div class="card-image"> <img src="img/materia/fisica.png" class="responsive-img"> </div>
-                                    <div class="card-content"> <span class="card-title black-text">Física</span>
-                                        <p>Aqui você irá encontrar tudo sobre Física.</p>
-                                    </div>
-                                    <div class="card-action center"> <a href='show.php?materia=fisica&frente=1' class="left">Frente 1</a> <a href='show.php?materia=fisica&frente=2' class="right">Frente 2</a>
-                                        <br><a href='show.php?materia=fisica&frente=3' class="left">Frente 3</a> <a href='show.php?materia=fisica&frente=4' class="right">Frente 4</a>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m4">
-                                <div class="card big">
-                                    <div class="card-image"> <img src="img/materia/geo.png" class="responsive-img"> </div>
-                                    <div class="card-content"> <span class="card-title black-text">Geografia</span>
-                                        <p>Aqui você irá encontrar tudo sobre geografia.</p>
-                                    </div>
-                                    <div class="card-action center"> <a href='show.php?materia=geografia&frente=1' class="left">Frente 1</a> <a href='show.php?materia=geografia&frente=2' class="right">Frente 2</a>
-                                        <br><a href='show.php?materia=geografia&frente=3' class="left">Frente 3</a> <a href='show.php?materia=geografia&frente=4' class="right">Frente 4</a>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m4">
-                                <div class="card big">
-                                    <div class="card-image"> <img src="img/materia/quimica.png" class="responsive-img"> </div>
-                                    <div class="card-content"> <span class="card-title black-text">Química</span>
-                                        <p>Aqui você irá encontrar tudo sobre Química.</p>
-                                    </div>
-                                    <div class="card-action center"> <a href='show.php?materia=quimica&frente=1' class="left">Frente 1</a> <a href='show.php?materia=quimica&frente=2' class="right">Frente 2</a>
-                                        <br><a href='show.php?materia=quimica&frente=3' class="left">Frente 3</a> <a href='show.php?materia=quimica&frente=4' class="right">Frente 4</a>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m4">
-                                <div class="card big">
-                                    <div class="card-image"> <img src="img/materia/port.png" class="responsive-img"> </div>
-                                    <div class="card-content"> <span class="card-title black-text">Português</span>
-                                        <p>Aqui você irá encontrar tudo sobre Física.</p>
-                                    </div>
-                                    <div class="card-action center"> <a href='show.php?materia=portugues&frente=1' class="left">Frente 1</a> <a href='show.php?materia=portugues&frente=2' class="right">Frente 2</a>
-                                        <br><a href='show.php?materia=portugues&frente=3' class="left">Frente 3</a> <a href='show.php?materia=portugues&frente=4' class="right">Frente 4</a>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m4">
-                                <div class="card big">
-                                    <div class="card-image"> <img src="img/materia/reda.png" class="responsive-img"> </div>
-                                    <div class="card-content"> <span class="card-title black-text">Redação</span>
-                                        <p>Aqui você irá encontrar tudo sobre Redação.</p>
-                                    </div>
-                                    <div class="card-action center"> <a href='show.php?materia=redacao&frente=1' class="left">Frente 1</a> <a href='show.php?materia=redacao&frente=2' class="right">Frente 2</a>
-                                        <br><a href='show.php?materia=redacao&frente=3' class="left">Frente 3</a> <a href='show.php?materia=redacao&frente=4' class="right">Frente 4</a>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m4">
-                                <div class="card big">
-                                    <div class="card-image"> <img src="img/materia/historia.png" class="responsive-img"> </div>
-                                    <div class="card-content"> <span class="card-title black-text">História</span>
-                                        <p>Aqui você irá encontrar tudo sobre História.</p>
-                                    </div>
-                                    <div class="card-action center"> <a href='show.php?materia=historia&frente=1' class="left">Frente 1</a> <a href='show.php?materia=historia&frente=2' class="right">Frente 2</a>
-                                        <br><a href='show.php?materia=historia&frente=3' class="left">Frente 3</a> <a href='show.php?materia=historia&frente=4' class="right">Frente 4</a>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m4">
-                                <div class="card big">
-                                    <div class="card-image"> <img src="img/materia/litera.png" class="responsive-img"> </div>
-                                    <div class="card-content"> <span class="card-title black-text">Literatura</span>
-                                        <p>Aqui você irá encontrar tudo sobre Redação.</p>
-                                    </div>
-                                    <div class="card-action center"> <a href='show.php?materia=literatura&frente=1' class="left">Frente 1</a> <a href='show.php?materia=literatura&frente=2' class="right">Frente 2</a>
-                                        <br><a href='show.php?materia=literatura&frente=3' class="left">Frente 3</a> <a href='show.php?materia=literatura&frente=4' class="right">Frente 4</a>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <?= $footerindex ?>
                 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
                 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
@@ -414,8 +407,6 @@
                         $('#troca_p_registro').click(function () {
                             $('#login').hide();
                             $('#register').show();
-                            $('#footer').removeClass('fixa');
-                            $('#footer2').removeClass('fixa1');
                         });
                         $('#troca_p_login').click(function () {
                             $('#login').show();

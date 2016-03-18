@@ -34,7 +34,6 @@
         </nav>
         <ul class="nav nav-tabs tab">
             <li role="presentation" class="active"><a href="#">Criar Aula</a></li>
-            <li role="presentation"><a href="#">Dúvidas <span class="badge">4</span></a></li>
         </ul>
         <div class="container">
             <center>
@@ -57,16 +56,7 @@
                         <option value="literatura">Literatura</option>
                     </select>
                     <br>
-                    <label for="sele2">Selecione a Matéria:</label>
-                    <select class="form-control" id="sele2">
-                        <option value="1">Frente 1</option>
-                        <option value="2">Frente 2</option>
-                        <option value="3">Frente 3</option>
-                        <option value="4">Frente 4</option>
-                    </select>
-                    <br>
                     <input type="text" id="nome" class="form-control" placeholder="Nome da aula" aria-describedby="sizing-addon2">
-
                 </div>
                 <textarea id="summernote" rows="6" name="textarea_name"></textarea>
                 <div class="btn-group">
@@ -112,13 +102,12 @@
                     $('#prog_log').show();
                     var nome = $('#nome').val(); //Pega valor do campo email
                     var mate = $('#sele').val(); //Pega valor do campo senha
-                    var frente = $('#sele2').val(); //Pega valor do campo senha
                     var content = $('#summernote').summernote('code');
                     content = encodeURIComponent(content);
                     $.ajax({ //Função AJAX
                         url: "create.php", //Arquivo php
                         type: "post", //Método de envio
-                        data: "nome=" + nome + "&materia=" + mate + "&frente=" + frente + "&content=" + content, //Dados
+                        data: "nome=" + nome + "&materia=" + mate + "&content=" + content, //Dados
                         success: function (result) { //Sucesso no AJAX
                             if (result == 1) {
                                 $('#sucess').show();

@@ -17,7 +17,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
         <title>Estude.me</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+
         <link href="css/materialize,min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+        <script>
+            $(document).ready(function () {
+                $('.parallax').parallax();
+                $('#nlog').hide();
+            });
+        </script>
         <style>
             @import url(https://fonts.googleapis.com/css?family=Raleway:500);
             nav ul a,
@@ -137,13 +146,8 @@
                         <?php
                         $query = "SELECT * FROM aula WHERE id='$idaula' ORDER BY id ASC";
                         $run = $mysql->query($query);
-         $contagem = $run->num_rows;
-                            $cont = 0;
-                        if($contagem == 0){
-                            echo "<h4>Você ainda não possui aulas.</h4>";
-                        }else{
-                    while($fetch = $run->fetch_assoc()){
-                    echo'<h2 class="center white-text text-lighten-1 title valign">Aula '.$naula.' - '.$fetch['nome'].' </h2>
+                        while($fetch = $run->fetch_assoc()){
+                    echo'<h2 class="center white-text text-lighten-1 title valign">Aula '.$fetch['nome'].' </h2>
                     <br>
                     <br>
                 </div>
@@ -155,22 +159,13 @@
             <div class="row">';
                     echo $fetch['conteudo'];
                     echo "</div>";
-                        }}
+                        }
                     ?>
                     </div>
                 </div>
 
             </div>
             <?= $footer ?>
-
-                <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-                <script src="js/materialize.min.js"></script>
-                <script>
-                    $(document).ready(function () {
-                        $('.parallax').parallax();
-                        $('#nlog').hide();
-                    });
-                </script>
 
 
     </body>

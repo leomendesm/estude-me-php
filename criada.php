@@ -163,7 +163,7 @@
                         $cont = 0;
                         $contagem = $run->num_rows;
                         if($contagem == 0){
-                            echo "<h4>Você ainda não possui aulas.</h4>";
+                            echo "<h4 class='center'>Você ainda não criou aulas! Clique <a href='criar'>Aqui</a> para começar agora.</h4>";
                         }else{
                         echo '<ul class="collection">';
                         while($fetch = $run->fetch_assoc()){
@@ -174,22 +174,24 @@
                     ?>
                 </div>
             </div>
-            <?php if($contagem == 0){
-                            echo "<br><br><br><br><br><br><br>";
+
+            <?= $footer ?>
+
+
+                <!--  Scripts-->
+                <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+                <script src="js/materialize.min.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        $('.parallax').parallax();
+                        $('#nlog').hide();
+                        var temaula = <?=$contagem?>;
+                        if (temaula == 0) {
+                            $('#footer').addClass('fixa');
+                            $('#footer2').addClass('fixa1');
                         }
-            ?>
-                <?= $footer ?>
-
-
-                    <!--  Scripts-->
-                    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-                    <script src="js/materialize.min.js"></script>
-                    <script>
-                        $(document).ready(function () {
-                            $('.parallax').parallax();
-                            $('#nlog').hide();
-                        });
-                    </script>
+                    });
+                </script>
 
     </body>
 
